@@ -22,8 +22,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           # Medio peligroso poner las variables así (?)
           script: |
-            mkdir -p /var/www/desarollo-web-uai/previews/${{ github.head_ref || github.ref_name }}
-            rm -rf /var/www/desarollo-web-uai/previews/${{ github.head_ref || github.ref_name }}/*
+            mkdir -p /var/www/desarrollo-web-uai/previews/${{ github.head_ref || github.ref_name }}
+            rm -rf /var/www/desarrollo-web-uai/previews/${{ github.head_ref || github.ref_name }}/*
 
       - name: Upload to server via SSH
         uses: appleboy/scp-action@v0.1.4
