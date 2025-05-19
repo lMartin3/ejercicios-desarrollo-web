@@ -34,3 +34,19 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           source: "."
           target: "/var/www/desarrollo-web-uai/previews/${{ github.head_ref || github.ref_name }}"
+
+      - name: Comment PR with live preview link
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          script: |
+            const previewUrl = `https://desarrolloweb.martinl.dev/${{ github.head_ref || github.ref_name }}`;
+            const body = `✅ Live preview: [${previewUrl}](${previewUrl})`;
+
+            await github.rest.issues.createComment({
+              issue_number: context.payload.pull_request.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body,
+            });
