@@ -1,0 +1,25 @@
+name: Deploy Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - '**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # This is needed to run the container, but no heavy build tools are installed.
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Upload to server via SSH
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          source: "."
+          target: "/var/www/desarollo-web-uai/previews/${{ github.head_ref || github.ref_name }}"
