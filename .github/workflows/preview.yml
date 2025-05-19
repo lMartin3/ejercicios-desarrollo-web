@@ -16,9 +16,10 @@ jobs:
       - name: Ensure target directory exists and is empty
         uses: appleboy/ssh-action@v1.0.3
         with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
           # Medio peligroso poner las variables así (?)
           script: |
             mkdir -p /var/www/desarollo-web-uai/previews/${{ github.head_ref || github.ref_name }}
