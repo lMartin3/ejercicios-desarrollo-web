@@ -33,4 +33,4 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           source: "."
-          target: "/var/www/desarollo-web-uai/previews/${{ github.head_ref || github.ref_name }}"
+          target: "/var/www/desarrollo-web-uai/previews/${{ github.head_ref || github.ref_name }}"
