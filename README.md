@@ -11,3 +11,6 @@ Link a github pages: https://lmartin3.github.io/ejercicios-desarrollo-web/
 Link a la preview de la branch master: https://desarrolloweb.martinl.dev/master/
 
 Link a todas las previews: https://desarrolloweb.martinl.dev/
+
+
+# TO-DO add reset js
