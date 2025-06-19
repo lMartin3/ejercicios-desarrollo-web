@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="reset.css"/>
     <link rel="stylesheet" href="style.css"/>
-    <title>Rosario 3</title>
+    <link rel="stylesheet" href="subscripcion.css"/>
+    <title>Rosario 3 - Suscribirse</title>
 </head>
 <body>
 <header class="main-header">
@@ -13,9 +15,6 @@
     </div>
     <div class="header-content">
         <nav class="top-part">
-            <a href="./subscripcion.html" id="subscription-button">
-                Suscribirse
-            </a>
             <a class="monospace" style="color: var(--gray-color); text-decoration: none" href="#">
                 JUE 15.05.2025
             </a>
@@ -294,113 +293,93 @@
     <div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
 </header>
 <main class="main">
-    <div class="head-tags">
-        <div class="category">
-            <a href="https://www.rosario3.com/seccion/policiales/">
-                POLICIALES
-            </a>
+    <a href="/index.html">&lt; Atrás</a>
+    <form id="form-subscripcion" method="post">
+        <div class="input-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" autocomplete="name"/>
         </div>
-        <div class="time">
-            HACE 14 HORAS
+        <div class="input-group">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" autocomplete="email"/>
         </div>
-    </div>
-    <h1 class="title">
-        Tensión en la Comisaría 15ª: un detenido se fugó y dos sufrieron quemaduras por un colchón prendido fuego
-    </h1>
-    <h3 class="summary">
-        Sarmiento y Ameghino hubo un fuerte despliegue tras un "desorden" entre presos que originó un intento de fuga.
-        Un interno logró evadirse. El incidente volvió a generar preocupación en algunos padres de alumnos que cursan en
-        la escuela ubicada enfrente
-    </h3>
-    <div class="button-bar">
-        <div class="tts">
-
+        <div class="input-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" autocomplete="new-password"/>
         </div>
-        <div class="socials">
-
+        <div class="input-group">
+            <label for="confirm-password">Repetir</label>
+            <input type="password" id="confirm-password" autocomplete="new-password"/>
         </div>
-    </div>
-    <div class="image-wrap">
-        <img src="img/imagen_rosario3.jpg">
-        <div class="image-subtext">
-            <div class="image-number">
-
-            </div>
-            <div>
-                La escena incluyó a decenas de policías, dotaciones de bomberos y un detenido en calzoncillos. (El Tres)
-            </div>
+        <div class="input-group">
+            <label for="fecha-nacimiento">Fecha de nacimiento</label>
+            <input type="date" id="fecha-nacimiento"/>
         </div>
-    </div>
-    <div class="text">
-        <p>
-            Un intenso despliegue policial se registró este miércoles por la tarde en la Comisaría 15ª, zona sur de
-            Rosario,
-            donde un grupo de detenidos prendió fuego un colchón dentro del calabozo, luego de un intento grupal de fuga
-            en
-            el que uno de los internos logró ese cometido. Las cámaras de El Tres captaron el momento en que uno de los
-            reclusos fue retirado de la dependencia con quemaduras en la cara para recibir atención médica.
-        </p>
-
-        <p>
-            El incidente volvió a generar preocupación en la comunidad escolar: algunos padres de alumnos de la Escuela
-            Nº
-            1.032, ubicada a pocos metros, se acercaron en horario escolar para retirar a sus hijos. Según fuentes
-            oficiales, la situación fue controlada.
-        </p>
-
-
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/vuftN-KDTKA?si=8ZzhbjLrL5KALmXV"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        Mirá también
-
-        Disparos al aire y pelea de presos en una comisaría superpoblada de zona sur: 48 en un lugar para 12
-        CIUDAD
-        Disparos al aire y pelea de presos en una comisaría superpoblada de zona sur: 48 en un lugar para 12
-        Hartazgo de vecinos de la comisaría 15ª tras el ataque incendiario a un patrullero
-        CIUDAD
-        Hartazgo de vecinos de la comisaría 15ª tras el ataque incendiario a un patrullero
-        La escena incluyó a decenas de policías, dotaciones de bomberos y un detenido en calzoncillos, con el rostro
-        visiblemente afectado por las llamas, saliendo a la vista de transeúntes y vecinos sorprendidos.
-
-        <p>
-            Todo ocurrió en la esquina de Sarmiento y Ameghino, en el marco de un operativo que se desplegó a raíz de un
-            “desorden” dentro de una seccional que suele estar abarrotada de detenidos. Había 59 en un lugar para 16.
-        </p>
-
-        <p>
-            Desde el Ministerio de Seguridad negaron que se haya tratado de un “motín” y explicaron que en el momento en
-            que
-            un cabo retiraba a uno de los detenidos por un traslado, parte de los internos generó una avalancha e
-            intentó
-            “ganar la puerta” para darse a la fuga. Sólo lograron salir hasta el patio pero uno agredió al personal y
-            escapó. Se llama Matías Contrera y aún no fue recapturado.
-        </p>
-
-
-        <iframe src="https://www.youtube.com/embed/rIa026UgT7o?si=juAaaEQmR56AFp36" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <p>
-            Luego de ese incidente, los demás reclusos prendieron fuego colchones, ropa y otros elementos en forma de
-            protesta. Fueron dos las personas que necesitaron asistencia por quemaduras, confirmó ante la prensa el
-            comisario Daniel Acosta, jefe de la Policía de Rosario. Fueron trasladados al Hospital de Emergencias
-            Clemente
-            Álvarez (Heca), mientras que otros tres fueron atendidas por lesiones.
-        </p>
-    </div>
-    <div class="tags">
-
-    </div>
+        <div class="input-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" autocomplete="tel"/>
+        </div>
+        <div class="input-group">
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" autocomplete="address-level2"/>
+        </div>
+        <div class="input-group">
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" autocomplete="street-address"/>
+        </div>
+        <div class="input-group">
+            <label for="codigo-postal">Código Postal</label>
+            <input type="text" id="codigo-postal" autocomplete="postal-code"/>
+        </div>
+        <div class="input-group">
+            <label for="dni">DNI</label>
+            <input type="text" id="dni"/>
+        </div>
+        <div class="input-group wide">
+            <input type="submit" id="submit" value="Suscribirse"/>
+        </div>
+    </form>
 </main>
 </body>
 
 <script>
-    function toggleMenu() {
-        document.querySelector('.hamburger-menu').classList.toggle('open');
-        document.querySelector('.hamburger-menu-overlay').classList.toggle('show');
-    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("form-subscripcion");
+        const submitButton = document.getElementById("submit");
+
+        const inputGroups = form.querySelectorAll(".input-group");
+        inputGroups.forEach(g => {
+            g.addEventListener("input", () => {
+                const input = g.querySelector("input");
+                if (input && input.classList.contains("error")) {
+                    input.classList.remove("error");
+                }
+            });
+        })
+
+        submitButton.addEventListener("click", (event) => {
+            let isValid = true;
+
+            inputGroups.forEach(group => {
+                const input = group.querySelector("input");
+                inputEmpty = input && input.value.trim() === "";
+                inputEmailInvalid = input && input.type==="email" && (!input.value.includes("@") || !input.value.includes("."))
+                if ((inputEmpty || inputEmailInvalid)) {
+                    isValid = false;
+                    input.classList.add("error");
+                } else if(input) {
+
+                } else if (input) {
+                    input.classList.remove("error");
+                }
+            });
+
+            if (!isValid) {
+                event.preventDefault();
+                alert("Por favor, complete todos los campos.");
+            }
+        });
+    });
 </script>
 </html>
