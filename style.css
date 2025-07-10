@@ -39,6 +39,15 @@ body {
 .header-logo img {
 }
 
+#subscription-button {
+    background-color: var(--orange-color);
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
 .header-content {
     display: flex;
     flex-direction: column;
@@ -116,8 +125,127 @@ body {
 }
 
 .header-content .bottom-part a:hover {
-    text-decoration: underline;
+    text-decoration: underline
 }
+
+
+.sticky-header {
+    background-color: var(--orange-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 56px;
+    padding: 0 20px;
+
+    margin: 0 0 3rem 0;
+}
+
+
+.hamburger {
+    color: white;
+}
+
+.hamburger-button {
+    cursor: pointer;
+    padding: 15px;
+    color: white;
+}
+
+
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    background-color: var(--orange-color);
+    color: white;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.hamburguer-menu-head {
+    padding: 0 20px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.close-button {
+    color: white;
+    position: relative;
+    width: 2rem;
+    background-color: white;
+}
+
+.close-button-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.close-button-block:first-of-type {
+    background-color: white;
+    transform: translate(50%, -50%) rotate(-45deg);
+}
+.close-button-block:last-of-type {
+    background-color: white ;
+    transform: translate(50%, -50%) rotate(45deg);
+}
+
+.hamburguer-menu-content {
+    padding: 30px 20px;
+    color: white;
+}
+
+.hamburguer-menu-content h4 {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.hamburguer-menu-content a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    line-height: 1.9rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.hamburger-menu.open {
+    left: 0;
+    display: block;
+}
+
+.hamburger-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 998;
+}
+
+.hamburger-menu-overlay.show {
+    display: block;
+}
+
+
 
 .main {
     /*max-width: 1367px;*/
@@ -182,7 +310,7 @@ h1 {
     line-height: 3.75rem;
 }
 
-h3 {
+h2, h3 {
     font-weight: 400;
 }
 
@@ -201,4 +329,35 @@ p {
 
 .text {
     font-size: 1.2rem;
+}
+
+@media (max-width: 1200px) {
+    .main-header {
+        display: none;
+    }
+    .header-content {
+        display: none;
+    }
+
+    .sticky-header {
+        display: flex;
+    }
+
+    h1 {
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 33px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+}
+
+
+@media (max-width: 950px) {
+    .main {
+        margin: 0 2rem;
+    }
 }
